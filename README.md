@@ -1,5 +1,7 @@
 # Ez::Core
 
+[![Build Status](https://travis-ci.org/ez-engines/ez-core.svg?branch=master)](https://travis-ci.org/ez-engines/ez-core)
+
 **Ez Engines** (read as "easy engines") - it's a collection of engines that allows you to prototype (or even release) [Rails](http://rubyonrails.org/) applications.
 Small reusable features that help to be more DRY, developing business logic and spent time to engineering trivial features.
 
