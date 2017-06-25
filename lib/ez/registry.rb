@@ -25,6 +25,10 @@ module Ez
         end
       end
 
+      def data(key)
+        store(key).map(&:data)
+      end
+
       private
 
       def get_or_initialize_store_by(key)

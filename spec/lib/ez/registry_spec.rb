@@ -18,6 +18,7 @@ RSpec.describe Ez::Registry do
   end
 
   it 'store data as registry' do
+    # .store
     expect(Ez::Registry.store(:test_registry).count).to eq 3
 
     Ez::Registry.store.each_key do |key|
@@ -41,5 +42,12 @@ RSpec.describe Ez::Registry do
 
     expect(Ez::Registry.store(:undefined_registry)).to be_empty
     expect(Ez::Registry.store(:undefined_registry)).to be_instance_of(Ez::Registry::Store)
+
+    # .data
+    expect(Ez::Registry.data(:test_registry)).to be_instance_of Array
+    expect(Ez::Registry.data(:test_registry).count).to eq 3
+    expect(Ez::Registry.data(:test_registry)[0]).to eq :a
+    expect(Ez::Registry.data(:test_registry)[1]).to eq 'b'
+    expect(Ez::Registry.data(:test_registry)[2]).to eq callable_object
   end
 end
