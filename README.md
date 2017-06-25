@@ -55,6 +55,11 @@ Ez::Registry.store(:my_registry) # =>
 #  ]
 ```
 
+All data stores in Recorc#data and you can use `.data` registry method for easy access
+```ruby
+Ez::Registry.data(:my_registry) # => [ :first_value, :second_value, :third_value ]
+```
+
 ### Examples:
 - Dependency inversion
 - Extend feature list
