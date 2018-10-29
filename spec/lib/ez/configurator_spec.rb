@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+require 'ez/configurator'
+
 RSpec.describe Ez::Configurator do
   module MyEngine
     include Ez::Configurator

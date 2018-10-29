@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
+require 'ez/registry'
+
 RSpec.describe Ez::Registry do
-  let(:callable_object) { Proc.new { 'Hello' } }
+  let(:callable_object) { proc { 'Hello' } }
   let(:someone_other)   { 'Someone other' }
 
   let!(:init) do

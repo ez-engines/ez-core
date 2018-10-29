@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'ostruct'
 
 module Ez
@@ -9,8 +11,8 @@ module Ez
     module Engine
       class Store < OpenStruct; end
 
-      def configure(&block)
-        block.call(config)
+      def configure
+        yield(config)
       end
 
       def config

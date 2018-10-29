@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'singleton'
 
 require 'ez/registry/store'
@@ -8,8 +10,7 @@ module Ez
     include Singleton
 
     class << self
-      def in(key, by:, &block)
-
+      def in(key, by:)
         get_or_initialize_store_by(key)
 
         add!(yield(Registry::Store.new), to: store[key], by: by)
@@ -35,7 +36,7 @@ module Ez
         store[key] || store[key] = Registry::Store.new
       end
 
-      def add!(*collection, to: , by:)
+      def add!(*collection, to:, by:)
         collection.flatten.each do |record|
           record.by = by
           to.push(record)

@@ -20,6 +20,8 @@ Heavily inspired by [dry-rb](http://dry-rb.org/), but for rails.
 
 Simple pluggable configuration for using in any module:
 ```ruby
+require 'ez/configurator'
+
 module MyEngine
   include Ez::Configurator
 end
@@ -38,6 +40,8 @@ MyEngine.config.your_value # => 'new value'
 Registry store for keep all knowledge in one place.
 Use for store any values across different engines:
 ```ruby
+require 'ez/registry'
+
 Ez::Registry.in :my_registry, by: MyEngine do |registry|
   registry.add :first_value
   registry.add :second_value

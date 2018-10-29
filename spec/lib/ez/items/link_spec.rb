@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'ez/items/link'
 
 RSpec.describe Ez::Items::Link do
@@ -6,6 +8,6 @@ RSpec.describe Ez::Items::Link do
   describe '#initialize' do
     it { expect(subject.label).to eq 'label' }
     it { expect(subject.path).to eq 'path' }
-    it { expect(subject.options).to eq({some: :options}) }
+    it { expect(subject.options).to eq(some: :options) }
   end
 end

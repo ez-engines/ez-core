@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Ez
   class Registry
     class Record

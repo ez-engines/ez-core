@@ -1,8 +1,6 @@
-require 'ez/core/version'
-require 'ez/configurator'
-require 'ez/registry'
+# frozen_string_literal: true
 
-require 'ez/items/link'
+require 'ez/core/version'
 
 module Ez
   module Core
